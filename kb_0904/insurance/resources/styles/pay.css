@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.content > h3.bullet_arrow {margin-top:20px;}
+.content > h3.bullet_arrow:before {top:5px;}
+
+.tab_subsection {margin-top:25px;}
+
+.bigger {font-size:1.50em;}
+.btn-box input[type="submit"] {font-size:1.50em;height:50px;}
+
+input[type="text"], select {border:solid 1px #ccc;height:28px;padding:3px;}
+select {min-width:60px;}
+select + select {margin-left:3px;}
+.size-full {width:100%;}
+.size-half {min-width:50%;}
+
+.point-cell + .point-cell {margin-top:12px;border-top:solid 1px #ddd;padding-top:8px;}
+.livemate {display:inline-block;position:relative;padding-left:40px;}
+.livemate:before {content:"";width:34px;height:29px;background:url(../images/pay/livemate.png) left center no-repeat;position:absolute;left:0;top:50%;margin-top:-18px;}
+
+
+.btn-circle {display:inline-block;border:solid 2px #b1b1b1;font-size:11px;line-height:14px;height:18px;width:18px;border-radius:100%;text-align:center;font-weight:700;color:#8e8e8e;font-family:verdana;position:relative;z-index:10;}
+.point {display:inline-block;font-size:12px;line-height:22px;height:22px;width:22px;border-radius:100%;text-align:center;font-weight:700;color:#fff;font-family:verdana;background:#fcaf17;margin-right:3px;}
+
+
+.pop-wrap {display:none;position:fixed;width:400px;left:50%;top:50%;margin-left:-200px;background:#fff;z-index:10000;}
+.smart-pop-wrap {max-height:590px;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:20px;}
+.pop-wrap > h3 {background:#f8b500;color:#5a5349;font-size:1.538em;padding:20px;font-weight:700;}
+.pop-wrap > a {display:block;position:absolute;right:20px;top:20px;text-indent:-999em;overflow:hidden;width:26px;height:26px;background:url(../images/common/ico_common.png) -120px top no-repeat;}
+.smart-pop-wrap li {font-weight:400;}
+
+@media all and (max-width:540px){
+	.content > h3.bullet_arrow {margin-top:20px;margin-left:10px;}
+
+
+	.pop-wrap {width:auto;left:10px;right:10px;max-height:90%;margin-left:0;}
+	.smart-pop-wrap {padding:15px;}
+	.pop-wrap > h3 {font-size:1.419em;padding:15px;}
+	.pop-wrap > a {right:15px;top:15px;height:17px;width:17px;background-position:-275px top;background-size:300px auto;}
+
+}

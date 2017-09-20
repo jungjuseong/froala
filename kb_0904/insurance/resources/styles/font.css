@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@font-face{
+	font-family:'NanumGothic';
+	font-style:normal;
+	font-weight:300;
+	src:local(NanumGothic),
+		url('../font/NanumGothic.ttf') format('ttf'),
+		url('../font/NanumGothic.ttf?#iefix') format('embedded-opentype');
+}
+@font-face{
+	font-family:'NanumGothicBold';
+	font-style:bold;
+	font-weight:700;
+	src:local(NanumGothicBold),
+		url('../font/NanumGothicBold.ttf') format('ttf'),
+		url('../font/NanumGothicBold.ttf?#iefix') format('embedded-opentype');
+}
+@font-face{
+	font-family:'NanumGothicExtraBold';
+	font-style:bold;
+	font-weight:800;
+	src:local(NanumGothicExtraBold),
+		url('../font/NanumGothicExtraBold.ttf') format('ttf'),
+		url('../font/NanumGothicExtraBold.ttf?#iefix') format('embedded-opentype');
+}
+
+@font-face{
+	font-family:'NanumSquareL';
+	font-style:normal;
+	font-weight:100;
+	src:local(NanumSquareL),
+		url('../font/NanumSquareL.ttf') format('ttf'),
+		url('../font/NanumSquareL.ttf?#iefix') format('embedded-opentype');
+}
+@font-face{
+	font-family:'NanumSquareR';
+	font-style:normal;
+	font-weight:300;
+	src:local(NanumSquareR),
+		url('../font/NanumSquareR.ttf') format('ttf'),
+		url('../font/NanumSquareR.ttf?#iefix') format('embedded-opentype');
+}
+@font-face{
+	font-family:'NanumSquareB';
+	font-style:normal;
+	font-weight:700;
+	src:local(NanumSquareB),
+		url('../font/NanumSquareB.ttf') format('ttf'),
+		url('../font/NanumSquareB.ttf?#iefix') format('embedded-opentype');
+}
+@font-face{
+	font-family:'NanumSquareEB';
+	font-style:normal;
+	font-weight:800;
+	src:local(NanumSquareEB),
+		url('../font/NanumSquareEB.ttf') format('ttf'),
+		url('../font/NanumSquareEB.ttf?#iefix') format('embedded-opentype');
+}

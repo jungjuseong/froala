@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum=scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../resources/styles/style_common.css">
+	<link rel="stylesheet" href="../resources/styles/smart.css">
+	<script src="../resources/js/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/common.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo_area">
+			<h1 class="logo"><a href="#">KB손해보험</a></h1>
+			<h2><span>스마트 안내문 수신 동의 신청서</span></h2>
+			<a href="">이전<span class="blind"> 페이지 이동</span></a>
+		</div>
+	</header>
+	
+	<!-- [s] contents -->
+	<section class="content">
+		<div class="tab_subsection only">
+			<div class="text_box">
+				<h3 class="bullet_arrow">KB스마트 안내문이란?</h3>
+				<div class="text_box_in">
+					<P>가입 계약 관련 안내를 고객님의 이메일 또는 모바일 등 전자문서로 발송하는 서비스</P>
+				</div>
+			</div>
+			<div class="text_box">
+				<h3 class="bullet_arrow">적용범위</h3>
+				<div class="text_box_in">
+					<P class="inline">당사와 현재 체결된 계약 및 향후 체결 될 계약 전부</P>
+					<p class="smart-detail-btn">
+						<a href="#smartPop" class="btn-detail" data-click="layer-pop">자세히 보기 &gt;</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- popup -->
+			<div id="smartPop">
+				<h3>소비자 권익보호에 관한 사항</h3>
+				<div class="smart-pop-wrap">
+					<div class="text_box">
+						<p>본 동의는 보험계약 체결에 필수적이지 않으며 동의를 거부하실 수 있습니다. <br>
+						또한, 동의하시더라도 당사 홈페이지 및 고객콜센터(1544-0114)를 통해 철회하실 수 있습니다.
+						</p>
+					</div>
+
+					<div class="agree-text-box">
+						<h4>개인[신용]정보의 수집 · 이용에 관한 사항</h4>
+						<div class="agree-text-cont">
+							<p>당사 및 당사 업무수탁자는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 수집·이용하고자 합니다.</p>
+							<ol class="number-list">
+								<li><p><strong>1. 개인(신용)정보의 수집·이용 목적 및 수집 </strong><br>보험 계약 유지, 관리 등에 대한 안내사항 전달</p></li>
+								<li><p><strong>2. 수집항목</strong><br>전자우편주소(E-mail Address), 휴대폰번호</p></li>
+								<li><p><strong>3. 개인(신용)정보의 보유·이용 기간</strong><br>수집·이용 동의일로부터 거래 종료 후 5년까지</p></li>
+							</ol>
+						</div>
+					</div>
+
+		
+					<div class="agree-text-box">
+						<h4>KB스마트 안내문 신청에 관한 사항</h4>
+						<div class="agree-text-cont">
+							<p> KB스마트 안내문으로 발송 예정인 안내문은 아래와 같습니다.</p>
+							<ul>
+								<li class="bullet_dot"><p>장기보험 : 증권, 계약관리안내문, 보험료납입 안내문(비월납 차기납입), 환급금지급 안내문(만기 및 중도환급), 보험계약 휴먼예고 및 부활 안내문(실효소멸 예정), 배당금 발생 안내문 등</p></li>
+								<li class="bullet_dot"><p>자동차보험 : 증권, 약관, 청약서부본, 분납안내, 만기예고안내, 만기안내 등</p></li>
+							</ul>
+
+							<p class="bullet_billiard">상기 안내문 이외에도 향후 일부 안내문이 추가될 수 있습니다.</p>
+							<p class="bullet_billiard">KB스마트 안내문 신청 여부와 관계없이 관련 법률 및 약관 등에 따라 서면으로 발송하여야 하는 안내문은 기존과 동일하게 우편으로 발송됩니다.</p>
+						</div>
+					</div>
+				</div>
+				<a href="#smartPop">팝업닫기</a>
+			</div>
+			<!--// popup -->
+			
+			<div class="text_box agree-txt">
+				<p class="bullet_billiard">당사는 귀하가 가입한 계약과 관련한 안내물을 이메일 또는 모바일(문자, Application) 등 전자 문서로 발송하고자 합니다. KB스마트 안내문을 신청하시겠습니까?</p>
+			</div>
+
+			<div class="agree-chk-box clearfix">
+				<div class="agree-chk">
+					<input type="radio" id="radio01" name="radio" value="1" class="radio"><label for="radio01" class="lb-radio">신청</label>
+					<input type="radio" id="radio02" name="radio" value="0" class="radio"><label for="radio02" class="lb-radio">신청안함</label>
+				</div>
+			</div>
+
+			<div class="btn-box al_c">
+				<input type="submit" value="본인확인" data-alert='{"mode":"confirm","msg":"confirm confirm confirm confirm confirm confirm confirm message","click":"submit","cancel":"close"}'>
+			</div>
+		</div>
+	</section>
+	<!-- [e] contents -->
+
+	<footer>
+		<div class="addr">
+			<span>(우)06134 서울시 강남구 테헤란로 117 KB손해보험빌딩(역삼동)</span>
+			<span>(주)KB손해보험대표이사 사장 양종희사업자등록번호 202-81-48370</span>
+			<span>COPYRIGHT &copy; KB INSURANCE CO. LTD. ALL RIGHTS RESERVED.</span>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.agree-text-box {margin-top:20px;}
+.agree-text-box + .agree-text-box {margin-top:0;}
+.agree-text-box h4 {border-top:solid 2px #575757;border-bottom:solid 1px #cfcfcf;background:#f3f3f3;padding:13px 20px;color:#333;font-weight:700;font-size:1.231em;}
+.agree-text-box .agree-text-cont {border-bottom:solid 1px #cfcfcf;padding:20px;line-height:1.85em;}
+.agree-text-box .agree-text-cont p + ol,.agree-text-box .agree-text-cont p + ul,
+.agree-text-box .agree-text-cont ol + p, .agree-text-box .agree-text-cont ul + p {margin-top:25px;}
+.agree-text-box .agree-text-cont ul > li > p {text-indent:-4.5em;padding-left:4.5em;}
+.agree-text-box .agree-text-cont ul > li:nth-child(2) > p {text-indent:-5.5em;padding-left:5.5em;}
+
+.agree-chk-box .agree-chk {float:right;margin-right:-20px;}
+.agree-chk-box + .text_box {margin-top:50px;}
+
+.agree-chk-box {padding:20px 0;}
+.agree-txt {padding:30px 0 20px 0;border-bottom:solid 1px #cfcfcf;}
+.smart-detail-btn {display:inline-block;margin-left:10px;}
+.inline {display:inline-block;}
+
+#smartPop {display:none;position:fixed;width:600px;left:50%;top:96px;margin-left:-300px;background:#fff;z-index:10000;}
+.smart-pop-wrap {max-height:590px;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:20px;}
+#smartPop > h3 {background:#f8b500;color:#5a5349;font-size:1.538em;padding:20px;font-weight:700;}
+#smartPop > a {display:block;position:absolute;right:20px;top:20px;text-indent:-999em;overflow:hidden;width:26px;height:26px;background:url(../images/common/ico_common.png) -120px top no-repeat;}
+
+@media all and (max-width:768px){
+	.agree-chk-box .agree-chk {margin-right:-15px;}
+
+	#smartPop {width:auto;left:10px;top:55px;right:10px;bottom:55px;margin-left:0;}
+	.smart-pop-wrap {padding:15px;}
+	#smartPop > h3 {font-size:1.419em;padding:15px;}
+	#smartPop > a {right:15px;top:15px;height:17px;width:17px;background-position:-275px top;background-size:300px auto;}
+
+	.inline {display:block;}
+	.smart-detail-btn {display:block;text-align:right;margin-top:13px;margin-left:0;}
+
+	.agree-text-box h4 {padding:12px 10px;font-size:1.125em;}
+}

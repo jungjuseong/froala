@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>File list</title>
+	<style type="text/css">
+	* {margin:0;padding:0;font-size:12px;font-weight:400;text-decoration:none;color:#666;}
+	body {padding:20px;}
+	table {table-layout:fixed;width:100%;min-width:960px;border-collapse:collapse;border-bottom:solid 1px #ddd;}
+	th, td {border:solid 1px #ddd;padding:5px;border-bottom:0;vertical-align: top;}
+	th {background:#f2f2f2;border-bottom:solid 1px #ddd;}
+	.date {color:#ddd;vertical-align:middle;}
+	td .date {display:block;}
+	em.date {display:inline-block;width:12px;height:12px;background:#ddd;margin-right:5px;}
+	.date.type2 {color:#ff0000;}
+	em.date.type2 {background:#ff0000;}
+	.date.type3 {color:#007e00;}
+	em.date.type3 {background:#007e00;}
+	.status {margin-bottom:15px;}
+	.status span + em {margin-left: 20px;}
+	td > a {display:inline-block;border:solid 1px #dedede;padding:2px 5px;font-size:11px;background:#fefefe;color:#000;}
+	.gubun td {border-top:solid 1px #000;}
+	tr td:first-child {font-weight:700;color:#000;}
+	tr td:nth-child(2) {color:#000;}
+
+	.common-box {border:solid 1px #ddd;background:#666;padding:10px 15px;}
+	.common-box strong {color:yellow;display:block;margin:8px 0 3px 0;}
+	.common-box p {color:#fff;padding-left:10px;}
+	.org {color:#ffb400;}
+	#preview {border:solid 10px #000;width:395px;height:667px;position:fixed;left:0;top:0;background:#fff;display:none;overflow:hidden;}
+	</style>
+
+	<script src="insurance/resources/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("td a").on("click", function() {
+				$("#preview").show();
+				$("#preview").attr("src", $(this).attr("href"));
+				return false;
+			});
+
+			$("body").on("click", function() {
+				$("#preview").hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="status">
+		<em class="date type1"></em><span>완료예정일</span>
+		<em class="date type2"></em><span>완료일 (24일 이전 작업 21일 완료로 표시)</span>
+		<em class="date type3"></em><span>수정일자</span>
+	</div>
+
+	<table>
+	<colgroup><col style="width:10%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:10%"><col style="width:*"></colgroup>
+	<tr>
+		<th>Depth01</th>
+		<th>Depth02</th>
+		<th>Depth03</th>
+		<th>Tab</th>
+		<th>Date</th>
+		<th>Link/Etc</th>
+	</tr>
+	<tr>
+		<td>공통</td>
+		<td>간편비밀번호 등록</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.07.21</span></td>
+		<td><a href="common/simplePwRegi.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>간편비밀번호 로그인</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.07.21</span></td>
+		<td><a href="common/simplePwLogin.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>간편비밀번호 변경</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.07.21</span></td>
+		<td><a href="common/simplePwChange.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>휴대폰 본인확인</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.07.21</span></td>
+		<td><a href="common/cellPersonalCheck.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>안내장 수신 이력</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.07.21</span></td>
+		<td><a href="common/receiveHistory.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>error</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.08.28</span></td>
+		<td><a href="common/error.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td colspan="6" class="common-box">
+				<strong>html 공통</strong>
+				<p>: 수정일자 옆에 [New]표시가 있는 파일은 최종 전달 이후 수정된 내용이 있는 파일임. 해당 날짜 주석부분 확인/업데이트  필요</p>
+				<strong>css/js 공통</strong>
+				<p>: css, common.js 는 최신으로 업데이트</p>
+				<strong>2017.07.31</strong>
+				<p> : accordion 부분의 키보드탭 이동이 안되는 관계로 다른 스크립트로 변경, 불필요한 jquery-ui.js 삭제 </p>
+				<p> : html  &lt;head&gt;부분 viewport 오타수정 <span class="org">(minimum=scale=1.0 -> minimum-scale=1.0)</span></p>
+				<strong>2017.08.16</strong>
+				<p> : 상단 별박스 애니메이션 전체 적용(미확정) - common.js </p>
+		</td>
+	</tr>
+	<tr class="gubun">
+		<td>서식공통</td>
+		<td>스마트동의안내서</td>
+		<td>type 1</td>
+		<td></td>
+		<td><span class="date type2">2017.07.26</span><span class="date type3">2017.08.08</span></td>
+		<td><a href="insurance/smart/agreeCheck.html" target="_blank">페이지열기</a>
+			하단 동의 버튼에 alert 연결<br>2017.08.08 :: 안내내용 팝업변경
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>type 2</td>
+		<td></td>
+		<td><span class="date type2">2017.07.26</span><span class="date type3">2017.08.08</span></td>
+		<td><a href="insurance/smart/agreeCheck_2.html" target="_blank">페이지열기</a>
+			하단 동의 버튼에 confirm  연결<br>2017.08.08 :: 안내내용 팝업변경</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>보험료 결제화면</td>
+		<td></td>
+		<td>신용카드</td>
+		<td rowspan="3"><span class="date type2">2017.08.17</span></td>
+		<td rowspan="3"><a href="insurance/pay/payForm.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>간편결제</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>무통장입금</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>계약조회</td>
+		<td></td>
+		<td>리스트</td>
+		<td><span class="date type2">2017.09.01</span></td>
+		<td><a href="insurance/inquiry/list.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>상세</td>
+		<td><span class="date type2">2017.09.01</span></td>
+		<td><a href="insurance/inquiry/view.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr class="gubun">
+		<td>자동차보험</td>
+		<td>증권</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.07.31</span></td>
+		<td><a href="insurance/car/stockIntro.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>증권</td>
+		<td rowspan="4"><span class="date type2">2017.08.03</span><span class="date type3">2017.08.10</span><span class="date type3">2017.08.16</span></td>
+		<td rowspan="4"><a href="insurance/car/stockTabs.html" target="_blank">페이지열기</a>
+		<br>2017.08.10 ::  수정부분 &lt;!-- 20170810--&gt; 주석
+		<br>2017.08.16 ::  내용추가 &lt;!-- 20170816--&gt; 주석</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>약관</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>청약서</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>상품설명서</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>약관</td>
+		<td>KB매직카 개인용 자동차 보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic01_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic01_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>KB매직카 업무용 자동차 보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic02_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic02_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>개인용 자동차보험 보통약관</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic03_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic03_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>업무용 자동차보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic04_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic04_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>KB매직카 개인용 자동차보험(웰빙)</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic05_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic05_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>KB매직카 다이렉트(인터넷) 개인용자동차보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic06_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic06_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>KB매직카 다이렉트 개인용자동차보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic07_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic07_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>KB매직카 다이렉트 업무용 자동차 보험 보통약관</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic08_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic08_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>KB매직카 다이렉트(인터넷) 업무용 자동차 보험 보통약관</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic09_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.09.04</span></td>
+		<td><a href="insurance/car/directMagic09_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>만기예고안내</td>
+		<td></td>
+		<td>계약사항</td>
+		<td rowspan="3"><span class="date type2">2017.07.21</span><span class="date type3">2017.07.26</span><span class="date type3">2017.08.07</span><span class="date type3">2017.08.10</span>
+			<span class="date type3">2017.09.04[New]</span>
+		</td>
+		<td rowspan="3"><a href="insurance/car/expirationNotice.html" target="_blank">페이지열기</a>
+			<br>table data 없을 경우 추가<br>
+			캐릭터 움직임 샘플 추가<br>
+			그래프 움직임 샘플 추가<br>
+			탭추가 및 캐릭터 이미지 추가
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>알림</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>혜택</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>만기안내</td>
+		<td></td>
+		<td>계약사항</td>
+		<td rowspan="3"><span class="date type2">2017.07.21</span><span class="date type3">2017.07.25</span></td>
+		<td rowspan="3"><a href="insurance/car/expirationInfo.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>알림</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>혜택</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>납입최고 해지 안내</td>
+		<td></td>
+		<td>계약사항</td>
+		<td rowspan="2"><span class="date type2">2017.07.21</span><span class="date type3">2017.07.25</span></td>
+		<td rowspan="2"><a href="insurance/car/closeInfo.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>알림</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>분납안내</td>
+		<td></td>
+		<td>계약사항</td>
+		<td rowspan="2"><span class="date type2">2017.07.21</span><span class="date type3">2017.07.25</span></td>
+		<td rowspan="2"><a href="insurance/car/installmentInfo.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>알림</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>가입 안내</td>
+		<td></td>
+		<td>기본사항</td>
+		<td rowspan="3"><span class="date type2">2017.07.21</span><span class="date type3">2017.07.25</span><span class="date type3">2017.07.27</span></td>
+		<td rowspan="3"><a href="insurance/car/joiningInfo.html" target="_blank">페이지열기</a>
+			<br>2017.07.27 ::  수정부분 &lt;!-- 20170727--&gt; 주석
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>가입사항 및 보험료사항</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>주의사항 및 계약담당자</td>
+	</tr>
+	<tr class="gubun">
+		<td>장기보험</td>
+		<td>계약관리안내</td>
+		<td></td>
+		<td>목차 [추가]</td>
+		<td><span class="date type1">2017.08.25</span></td>
+		<td><a href="insurance/longterm/contractInfoIndex.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>type 1</td>
+		<td>계약사항</td>
+		<td rowspan="4"><span class="date type2">2017.07.21</span><span class="date type3">2017.07.26</span><span class="date type3">2017.07.27</span><span class="date type3">2017.08.09</span></td>
+		<td rowspan="4"><a href="insurance/longterm/contractInfo.html" target="_blank">페이지열기</a>
+		<br>2017.07.27 :: 휴먼 -> 휴면 전체 변경, 수정부분 &lt;!-- 20170727--&gt; 주석
+		<br>2017.08.09 :: 수정부분 &lt;!-- 20170809--&gt; 주석
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>장기계약안내</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>안내</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>휴면보험금</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>type 2</td>
+		<td>계약사항</td>
+		<td><span class="date type2">2017.08.18</span></td>
+		<td><a href="insurance/longterm/contractInfo02.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>자동갱신안내</td>
+		<td></td>
+		<td>계약사항 및 변동사항</td>
+		<td rowspan="3"><span class="date type2">2017.07.31</span></td>
+		<td rowspan="3"><a href="insurance/longterm/autoRenewal.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>알림</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>광고</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>약관</td>
+		<td>든든생활보장보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms01_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms01_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>내마음 아는 암보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms02_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>꼭 알아두기</td>
+		<td rowspan="2"><span class="date type2">2017.08.07</span></td>
+		<td rowspan="2"><a href="insurance/longterm/directTerms02_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>안심상해보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms03_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms03_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>부모마음아는 자녀보험II</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms04_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms04_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>상해종합 운전자 보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms05_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms05_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>신간편가입건강보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms06_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.06</span></td>
+		<td><a href="insurance/longterm/directTerms01_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>해피라이프건강보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms07_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms07_contents.html" target="_blank">페이지열기</a></td>
+	</tr>	
+	<tr>
+		<td></td>
+		<td></td>
+		<td>해피실속건강보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms08_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms08_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>든든한 생활보장보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms09_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms09_contents.html" target="_blank">페이지열기</a></td>
+	</tr>	
+	<tr>
+		<td></td>
+		<td></td>
+		<td>손해실손의료비보장보험</td>
+		<td>표지</td>
+		<td><span class="date type2">2017.08.08</span></td>
+		<td><a href="insurance/longterm/directTerms10_cover.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>목차</td>
+		<td><span class="date type2">2017.08.07</span></td>
+		<td><a href="insurance/longterm/directTerms10_contents.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>실효안내</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.08.11</span><span class="date type3">2017.08.18</span></td>
+		<td><a href="insurance/longterm/lostingEffect.html" target="_blank">페이지열기</a>
+		<br>2017.08.18 :: 수정부분 &lt;!-- 20170818--&gt; 주석
+		</td>
+	</tr>
+	<tr class="gubun">
+		<td>일반보험</td>
+		<td>만기/분납안내</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.08.21</span></td>
+		<td><a href="insurance/general/expirationInfo.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>실효안내</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.08.21</span></td>
+		<td><a href="insurance/general/lostingEffect.html" target="_blank">페이지열기</a></td>
+	</tr>
+	<tr class="gubun">
+		<td>개인대출</td>
+		<td>보험계약대출금이자미납안내</td>
+		<td></td>
+		<td></td>
+		<td><span class="date type2">2017.08.22</span></td>
+		<td><a href="insurance/private/unpaidInterest.html" target="_blank">페이지열기</a></td>
+	</tr>
+	</table>
+
+	<iframe src="about:blank" id="preview"></iframe>
+</body>
+</html>
